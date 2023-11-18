@@ -1,1 +1,59 @@
-Anmol is gay
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <?php
+    include ("product_details.php"); 
+    $productDetails = getProductDetails();
+    ?>
+    <header>
+        <img url="https://png.pngtree.com/png-clipart/20200701/original/pngtree-shopping-mall-logo-png-image_5406131.jpg">
+        <p>Daraz from Ratnapark</p>
+        <nav>
+            <a href="">Home</a>
+            <a href="Project\login_page.html" target="_blank">Login</a>
+            <a href="Project\register_page.html" target="_blank">Sign Up</a>
+        </nav>
+    </header>
+    <main>
+        <div class="card">
+
+            <?php foreach ($productDetails as $product) ?>
+            <div class="description1">
+                
+                <img src="https://imgs.search.brave.com/gDb9p2RhhQfNTIRLyZQ7hpSZuaBRrSRPOhj096zCSGI/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9nZW5z/aGluZGIub3JnL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIxLzAx/L1FpcWktU3BsYXNo/LUFydC5wbmc" width="300cm" height="300cm">
+                <h3>Product Name: <?= $product['name'] ?></h3>
+                <p>Price: $<?= $product['price'] ?></p>
+                <p>Description: <?= $product['description'] ?></p>
+            </div>
+            <?php endforeach ?>
+<!-- 
+            <div class="description2">
+                <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK7WfeohQzovZgj7g1l3ubrKLUs0DQcJbUDQ" >
+                <h3>Product Name: Pen case</h3>
+                <p>Price: $10.00</p>
+                <p>Description:</p>
+                <p>Looks good, fine ink even spered works under water.</p>
+            </div>
+
+            <div class="description3">
+                <img src="https://imgs.search.brave.com/37u5xBRjeHUYCTcsrJ3DgOxA866jujbmFM6DOWG1lVM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLmlt/Z2ZsaXAuY29tLzQv/NHhncXUuanBn">
+                <h3>Product Name: Lonely kitten</h3>
+                <p>Price: $30.00</p>
+                <p>Description:</p>
+                <p>Sleep 18hrs a day, Cute, Will scratch every surface</p> -->
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
